@@ -1,1 +1,0 @@
-pref("extensions.mutetabsmatchingpattern.patterns", ["*YouTube*"]);
