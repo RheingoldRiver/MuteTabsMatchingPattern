@@ -13,3 +13,5 @@ SetTitleMatchMode 2
  Send, !{tab}
  return
  ```
+
+Installation link: https://addons.mozilla.org/en-US/firefox/addon/mutetabsmatchingpattern/
