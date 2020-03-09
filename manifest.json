@@ -1,0 +1,47 @@
+{
+
+	"manifest_version": 2,
+	"name": "MuteTabsMatchingPattern",
+	"version": "1.0",
+
+	"description": "Toggles mute of all tabs matching pattern",
+
+	"icons": {
+		"96": "icons/mute-tabs-96.png",
+		"48": "icons/mute-tabs-48.png"
+	},
+	
+	"applications": {
+		"gecko": {
+			"id": "muteTabsMatchingPattern@river.me"
+		}
+	},
+	
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	"options_ui": {
+		"page": "tab_mute_toggle_options.html"
+	},
+	
+	"browser_action": {
+		"default_icon": { "32": "icons/mute-tabs-32.png", "16": "icons/mute-tabs-16.png" },
+		"default_title": "Mute Twitch"
+	},
+
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+O"
+			},
+			"description": "Toggle mute of all tabs matching pattern"
+		}
+	},
+
+ "permissions": [
+	 "tabs",
+	 "storage"
+ ]
+
+}
