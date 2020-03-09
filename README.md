@@ -8,10 +8,17 @@ It's designed to work with the following AutoHotKey script to make it globally a
 ```autohotkey
 SetTitleMatchMode 2
 ^!+x::
- WinActivate,Mozilla Firefox
- Send, ^+O
- Send, !{tab}
- return
+ if WinActive("Mozilla Firefox") {
+  Send, ^+O
+  return
+ }
+ else {
+  WinActivate,Mozilla Firefox
+  Send, ^+O
+  #IfWinActive
+  Send, !{tab}
+  return
+ }
  ```
 
 Installation link: https://addons.mozilla.org/en-US/firefox/addon/mutetabsmatchingpattern/
