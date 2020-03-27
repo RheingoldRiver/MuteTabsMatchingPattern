@@ -15,7 +15,6 @@ SetTitleMatchMode 2
  else {
   WinActivate,Mozilla Firefox
   Send, ^+O
-  #IfWinActive
   Send, !{tab}
   return
  }
