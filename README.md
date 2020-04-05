@@ -8,9 +8,14 @@ It's designed to work with the following AutoHotKey script to make it globally a
 ```autohotkey
 SetTitleMatchMode 2
 ^!+x::
-    IfWinNotExist ahk_class MozillaWindowClass
+	IfWinActive ahk_class MozillaWindowClass
+	{
+		Send, ^+O
 		return
-    ControlSend,ahk_parent, ^+O
+	}
+	IfWinNotExist ahk_class MozillaWindowClass
+		return
+	ControlSend,ahk_parent, ^+O
 	return
  ```
 
